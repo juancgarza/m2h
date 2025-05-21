@@ -26,12 +26,21 @@ To generate an index and append it to your index.md post, use:
 bun run generator.ts
 ```
 
+### RSS feed
+
+Generate an RSS feed for all posts with:
+
+```bash
+bun run feed.ts
+```
+
 ## Project Structure
 
 - `index.ts`: The main entry point of the application. It sets up the server and handles requests.
 - `router.ts`: Configures the file system router for serving Markdown files from the `posts` directory.
 - `parser.ts`: Contains the logic for converting Markdown to HTML.
 - `generator.ts`: Generates an index page for the blog by scanning the `posts` directory for Markdown files.
+- `feed.ts`: Produces an RSS feed from the posts.
 - `styles.css`: Contains the Tailwind CSS imports.
 - `posts/`: This directory should contain your blog posts written in Markdown.
 
